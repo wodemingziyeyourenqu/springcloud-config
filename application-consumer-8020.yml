@@ -1,0 +1,15 @@
+server:
+  port: 8020
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7000/eureka
+  instance:
+    instance-id: comsumer-8020                #定义微服务的名称
+    prefer-ip-address: true  #是否显示IP和端口
+spring:
+  application:
+    name: consumer
+feign:
+  hystrix:
+    enabled: true #启动熔断机制
